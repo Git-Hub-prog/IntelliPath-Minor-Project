@@ -1,0 +1,281 @@
+/* ===== HOME PAGE SPECIFIC ===== */
+
+
+.hero-ctas {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+
+/* --- Sections --- */
+.section {
+    position: relative;
+    padding: 1rem 0 3rem 0;
+    scroll-margin-top: 4.5rem;
+}
+
+#insights,
+#about {
+    height: calc(100vh - 4.5rem);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    scroll-margin-top: 4.5rem;
+    overflow: hidden;
+}
+
+.section-header {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.section-header h2 {
+    font-size: clamp(1.875rem, 4vw, 3rem);
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+.section-header p {
+    color: var(--muted);
+    font-size: 1.125rem;
+    max-width: 36rem;
+    margin: 0 auto;
+}
+
+/* --- Features --- */
+.features-bg {
+    position: absolute;
+    inset: 0;
+    opacity: 0.5;
+    background:
+        radial-gradient(ellipse at 20% 50%, hsla(170, 80%, 45%, 0.15) 0%, transparent 50%),
+        radial-gradient(ellipse at 80% 20%, hsla(160, 70%, 40%, 0.1) 0%, transparent 50%),
+        radial-gradient(ellipse at 50% 80%, hsla(170, 90%, 60%, 0.08) 0%, transparent 50%);
+}
+
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+    max-width: 56rem;
+    margin: 0 auto;
+}
+
+.feature-card {
+    border-radius: 1rem;
+    padding: 1.5rem;
+    display: flex;
+    gap: 1rem;
+    transition: border-color 0.3s;
+}
+
+.feature-card:hover {
+    border-color: hsla(170, 80%, 45%, 0.3);
+}
+
+.feature-icon {
+    width: 3rem;
+    height: 3rem;
+    border-radius: 0.75rem;
+    background: hsla(170, 80%, 45%, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    color: var(--primary);
+}
+
+.feature-card h3 {
+    font-weight: 600;
+    margin-bottom: 0.25rem;
+}
+
+.feature-card p {
+    font-size: 0.875rem;
+    color: var(--muted);
+    line-height: 1.6;
+}
+
+/* --- Mapping (CTA) Section --- */
+.cta-box {
+    border-radius: 1.5rem;
+    padding: 3rem 2rem;
+    text-align: center;
+    max-width: 56rem;
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+    border: 1px solid hsla(170, 80%, 45%, 0.3);
+    box-shadow: 0 0 20px hsla(170, 80%, 45%, 0.15), inset 0 0 20px hsla(170, 80%, 45%, 0.05);
+}
+
+.cta-glow {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 25rem;
+    height: 25rem;
+    background: hsla(170, 80%, 45%, 0.1);
+    border-radius: 50%;
+    filter: blur(120px);
+}
+
+.cta-box h2 {
+    font-size: clamp(2rem, 5vw, 3.5rem);
+    font-weight: 700;
+    margin-bottom: 3.5rem;
+    margin-top: 0;
+    position: relative;
+    z-index: 1;
+}
+
+.cta-list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2.5rem;
+    text-align: left;
+    max-width: 56.25rem;
+    margin: 0 auto;
+    list-style: none;
+    position: relative;
+    z-index: 1;
+}
+
+.cta-item {
+    display: flex;
+    gap: 1.25rem;
+    align-items: flex-start;
+    padding: 1.25rem;
+    background: hsla(220, 15%, 15%, 0.3);
+    border-radius: 1rem;
+    border: 1px solid hsla(170, 80%, 45%, 0.1);
+    transition: all 0.3s ease;
+}
+
+.cta-item:hover {
+    background: hsla(220, 15%, 20%, 0.4);
+    border-color: hsla(170, 80%, 45%, 0.3);
+    transform: translateY(-4px);
+}
+
+.cta-item svg {
+    color: var(--primary);
+    flex-shrink: 0;
+    width: 24px;
+    height: 24px;
+}
+
+.cta-item h4 {
+    font-size: 1.125rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    color: var(--primary);
+}
+
+.cta-item p {
+    font-size: 0.9375rem;
+    color: var(--muted);
+    line-height: 1.5;
+    margin-bottom: 0 !important;
+}
+
+@media (max-width: 768px) {
+    .cta-list {
+        grid-template-columns: 1fr;
+    }
+
+    .hero-ctas {
+        flex-direction: column;
+    }
+}
+
+/* --- Additional Home Page Responsiveness --- */
+
+/* Tablets (481px–1024px) */
+@media (max-width: 1024px) {
+    .features-grid {
+        max-width: 90%;
+        gap: 1.25rem;
+    }
+
+    .cta-box {
+        max-width: 90%;
+        padding: 2.5rem 1.5rem;
+    }
+
+    .cta-list {
+        gap: 1.5rem;
+    }
+}
+
+/* Tablets (481px–768px) */
+@media (max-width: 768px) {
+    .section {
+        padding: 2rem 0;
+    }
+
+    #insights,
+    #about {
+        height: auto;
+        min-height: auto;
+        padding: 4rem 0;
+    }
+
+    .features-grid {
+        grid-template-columns: 1fr;
+        max-width: 100%;
+        padding: 0 1rem;
+    }
+
+    .feature-card {
+        padding: 1.25rem;
+    }
+
+    .cta-box h2 {
+        font-size: 2.5rem;
+        margin-bottom: 2.5rem;
+    }
+
+    .cta-list {
+        grid-template-columns: 1fr;
+        max-width: 100%;
+    }
+
+    .cta-item {
+        padding: 1rem;
+    }
+}
+
+/* Mobile Devices (320px–480px) */
+@media (max-width: 480px) {
+    .section-header h2 {
+        font-size: 2rem;
+    }
+
+    .section-header p {
+        font-size: 1rem;
+        padding: 0 1rem;
+    }
+
+    .cta-box {
+        padding: 2rem 1rem;
+        border-radius: 1rem;
+    }
+
+    .cta-box h2 {
+        font-size: 1.75rem;
+        margin-bottom: 2rem;
+    }
+
+    .cta-item h4 {
+        font-size: 1rem;
+    }
+
+    .cta-item p {
+        font-size: 0.85rem;
+    }
+}

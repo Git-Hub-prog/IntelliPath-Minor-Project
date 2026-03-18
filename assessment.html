@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Assessment — IntelliPath</title>
+    <link rel="stylesheet" href="../static/css/base.css" />
+    <link rel="stylesheet" href="../static/css/assessment.css" />
+</head>
+
+<body class="assessment-body">
+
+    <!-- MINIMAL EXIT BUTTON -->
+    <div class="assessment-exit-wrapper">
+        <div class="container" style="display: flex; justify-content: flex-end; padding: 1.5rem 0;">
+            <a href="/" class="btn-exit">
+                Exit
+            </a>
+        </div>
+    </div>
+
+    <main class="assessment-main">
+        <div class="hero-bg"></div>
+        <div class="hero-orb hero-orb-1"></div>
+        <div class="hero-orb hero-orb-3"></div>
+
+        <div class="container assessment-container">
+            <div class="assessment-header">
+                <div id="step-label" class="step-label">Step 1: Learning & Interest style</div>
+                <h2 id="step-title">Personal <span class="glow-text">Discovery</span></h2>
+            </div>
+
+            <div id="questions-container" class="questions-grid">
+                <!-- Questions will be injected here via JS -->
+            </div>
+
+            <div class="assessment-nav">
+                <button id="prev-btn" class="nav-btn prev" disabled>Previous</button>
+                <button id="next-btn" class="nav-btn next">Next Step</button>
+            </div>
+        </div>
+    </main>
+
+
+    <script src="../static/js/script.js"></script>
+</body>
+
+</html>

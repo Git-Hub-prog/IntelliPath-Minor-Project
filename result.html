@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Your Path — IntelliPath</title>
+    <link rel="stylesheet" href="../static/css/base.css" />
+    <link rel="stylesheet" href="../static/css/result.css" />
+</head>
+
+<body class="result-body">
+
+    <!-- NAVBAR -->
+    <nav class="navbar glass-strong">
+        <div class="container navbar-inner">
+            <a href="/" class="logo">
+                <div class="logo-text">Intelli<span>Path</span></div>
+            </a>
+            <a href="/" class="btn-primary nav-cta">
+                Back to Home
+            </a>
+        </div>
+    </nav>
+
+    <main class="result-main">
+        <div class="hero-bg"></div>
+        <div class="hero-orb hero-orb-1" style="top: 10%; left: 10%;"></div>
+        <div class="hero-orb hero-orb-2" style="bottom: 10%; right: 10%;"></div>
+
+        <div class="container result-container">
+            <!-- TOP CAREER CARD -->
+            <div id="top-career-container" class="result-card glass-strong fade-up">
+                <div class="result-header">
+                    <h1>Your Ideal Match</h1>
+                    <div id="top-career-name" class="top-career-name glow-text">...</div>
+                </div>
+                <p id="top-career-desc" class="result-desc">
+                    Based on your analytical strengths and creative drive, we've identified this path as your most
+                    compatible future career.
+                </p>
+                <div class="result-actions">
+                    <button class="btn-primary" id="view-top-roadmap">
+                        View Learning Roadmap
+                    </button>
+                    <button class="btn-secondary" onclick="window.location.href='/assessment'">
+                        Retake Assessment
+                    </button>
+                </div>
+            </div>
+
+            <!-- OTHER MATCHES -->
+            <section class="matches-section fade-up">
+                <h2>Other Recommended <span class="glow-text">Paths</span></h2>
+                <div id="matches-grid" class="matches-grid">
+                    <!-- Dynamic Matches -->
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <script src="../static/js/script.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const results = JSON.parse(sessionStorage.getItem('assessmentResults'));
+            if (!results) {
+                window.location.href = '/';
+                return;
+            }
+
+            // Populate Top Career
+            document.getElementById('top-career-name').innerText = results.top_career;
+
+            const topCareerObj = careers.find(c => c.name === results.top_career);
+            if (topCareerObj) {
+                document.getElementById('view-top-roadmap').onclick = () => showModal(topCareerObj);
+            }
+
+            // Populate Matches
+            const grid = document.getElementById('matches-grid');
+            results.top_matches.slice(1).forEach(matchName => {
+                const matchObj = careers.find(c => c.name === matchName);
+                if (!matchObj) return;
+
+                const card = document.createElement('div');
+                card.className = 'match-card glass';
+                card.innerHTML = `
+                    <h3>${matchName}</h3>
+                    <p>${matchObj.shortDesc}</p>
+                    <button class="btn-secondary view-match-details" style="padding: 0.5rem 1rem; font-size: 0.875rem;">View Details</button>
+                `;
+
+                card.querySelector('.view-match-details').onclick = () => showModal(matchObj);
+                grid.appendChild(card);
+            });
+
+            // Trigger animations
+            document.querySelectorAll('.fade-up').forEach(el => el.classList.add('visible'));
+        });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<!--  -->
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>IntelliPath — AI-Powered Career Intelligence</title>
+  <meta name="description"
+    content="Navigate your future career with clarity. Discover roles, explore skill paths, and make confident career decisions backed by real-time market insights." />
+  <link rel="stylesheet" href="../static/css/base.css" />
+  <link rel="stylesheet" href="../static/css/home.css" />
+  <link rel="stylesheet" href="../static/css/careers.css" />
+</head>
+
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar glass-strong">
+    <div class="container navbar-inner">
+      <a href="/" class="logo">
+        <div class="logo-text">Intelli<span>Path</span></div>
+      </a>
+      <ul class="nav-links">
+        <li><a href="#roles">Roles</a></li>
+        <li><a href="#insights">Insights</a></li>
+        <li><a href="#about">About</a></li>
+      </ul>
+      <button class="btn-primary nav-cta" id="nav-get-started">
+        Get Started
+        <svg class="icon-sm" viewBox="0 0 24 24">
+          <path d="M5 12h14M12 5l7 7-7 7" />
+        </svg>
+      </button>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-bg"></div>
+    <div class="hero-orb hero-orb-1"></div>
+    <div class="hero-orb hero-orb-2"></div>
+    <div class="hero-orb hero-orb-3"></div>
+    <div class="hero-grid"></div>
+
+    <div class="hero-content">
+
+
+      <h1>
+        Navigate Your<br />
+        <span class="glow-text">Future Career</span><br />
+        With Clarity
+      </h1>
+
+      <p class="hero-sub">
+        Discover roles that match your strengths, explore skill paths, and make
+        confident career decisions backed by real-time market insights.
+      </p>
+
+      <div class="hero-ctas">
+        <button class="btn-primary" id="start-assessment">Start Assessment</button>
+        <button class="btn-secondary" onclick="document.querySelector('#roles').scrollIntoView({behavior: 'smooth'})">
+          Explore Careers
+          <svg class="icon-arrow" viewBox="0 0 24 24">
+            <path d="M5 12h14M12 5l7 7-7 7" />
+          </svg>
+        </button>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- CAREER ROLES -->
+  <section id="roles" class="section">
+    <div class="container">
+      <div class="section-header">
+        <h2>Explore <span class="glow-text">Career Paths</span></h2>
+        <p>Discover roles aligned with your skills and ambitions. Each path includes real market data.</p>
+      </div>
+
+      <div class="roles-grid">
+        <!-- Dynamic Careers Rendered via JS -->
+      </div>
+
+      <div class="explore-actions fade-up" style="text-align: center;">
+        <button id="explore-more-btn" class="btn-primary">
+          Explore More Careers
+          <svg class="icon-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+            stroke-linecap="round" stroke-linejoin="round">
+            <path d="M5 12h14M12 5l7 7-7 7" />
+          </svg>
+        </button>
+      </div>
+
+
+
+
+
+
+
+
+    </div>
+  </section>
+
+  <!-- FEATURES -->
+  <section id="insights" class="section">
+    <div class="features-bg"></div>
+    <div class="container" style="position:relative">
+      <div class="section-header fade-up">
+        <h2>Gain Unmatched <span class="glow-text">Clarity</span></h2>
+        <p>Discover the value of knowing your direction before you write your first line of code.</p>
+      </div>
+
+      <div class="features-grid">
+        <div class="feature-card glass fade-up">
+          <div class="feature-icon">
+            <svg class="icon-md" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="22 7 13.5 15.5 8.5 10.5 2 17" />
+              <polyline points="16 7 22 7 22 13" />
+            </svg>
+          </div>
+          <div>
+            <h3>Absolute Clarity</h3>
+            <p>Eliminate the noise and focus on a specific career path that fits your unique profile.</p>
+          </div>
+        </div>
+        <div class="feature-card glass fade-up">
+          <div class="feature-icon">
+            <svg class="icon-md" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="10" />
+              <circle cx="12" cy="12" r="6" />
+              <circle cx="12" cy="12" r="2" />
+            </svg>
+          </div>
+          <div>
+            <h3>Decision Confidence</h3>
+            <p>Replace doubt with data-backed certainty about which engineering role is your best fit.</p>
+          </div>
+        </div>
+        <div class="feature-card glass fade-up">
+          <div class="feature-icon">
+            <svg class="icon-md" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round">
+              <path d="M13 2 3 14h9l-1 8 10-12h-9l1-8z" />
+            </svg>
+          </div>
+          <div>
+            <h3>Optimized Roadmap</h3>
+            <p>Save time by focusing on the right specialization early instead of exploring everything.</p>
+          </div>
+        </div>
+        <div class="feature-card glass fade-up">
+          <div class="feature-icon">
+            <svg class="icon-md" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round">
+              <path d="M3 3v16a2 2 0 0 0 2 2h16" />
+              <path d="m19 9-5 5-4-4-3 3" />
+            </svg>
+          </div>
+          <div>
+            <h3>Long-term Purpose</h3>
+            <p>Stay motivated with a clear vision of where you are going and why it matters.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section id="about" class="section">
+    <div class="container">
+      <div class="cta-box glass-strong fade-up" style="max-width: 64rem;">
+        <div class="cta-glow"></div>
+        <h2>How We Map Your <span class="glow-text">Inner</span> Path</h2>
+
+        <div class="cta-list">
+          <div class="cta-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+              stroke-linejoin="round">
+              <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline>
+            </svg>
+            <div>
+              <h4>Behavioral Analysis</h4>
+              <p>We study your logic and problem-solving style to uncover where you naturally excel.</p>
+            </div>
+          </div>
+
+          <div class="cta-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+              stroke-linejoin="round">
+              <polygon
+                points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2">
+              </polygon>
+            </svg>
+            <div>
+              <h4>Interest Decoding</h4>
+              <p>Our AI identifies domain matches that align with your genuine technical curiosities.</p>
+            </div>
+          </div>
+
+          <div class="cta-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+              stroke-linejoin="round">
+              <path
+                d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z">
+              </path>
+              <polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline>
+              <line x1="12" y1="22.08" x2="12" y2="12"></line>
+            </svg>
+            <div>
+              <h4>Personality Mapping</h4>
+              <p>We match your thinking traits—analytical or creative—to compatible career paths.</p>
+            </div>
+          </div>
+
+          <div class="cta-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+              stroke-linejoin="round">
+              <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+            </svg>
+            <div>
+              <h4>Beginner-Friendly Logic</h4>
+              <p>We simplify discovery by understanding your potential before suggesting a direction.</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container footer-grid">
+
+      <!-- Brand Column -->
+      <div class="footer-col brand-col">
+        <a href="#" class="logo">
+          <div class="logo-text">Intelli<span>Path</span></div>
+        </a>
+        <p class="footer-desc">
+          Empowering your career journey with AI-driven insights and personalized roadmaps.
+        </p>
+      </div>
+
+      <!-- Explore -->
+      <div class="footer-col">
+        <h4>Explore</h4>
+        <ul class="footer-links-vertical">
+          <li><a href="#roles">Career Roles</a></li>
+          <li><a href="#insights">Insights</a></li>
+          <li><a href="#about">About Analysis</a></li>
+        </ul>
+      </div>
+
+      <!-- Legal -->
+      <div class="footer-col">
+        <h4>Legal</h4>
+        <ul class="footer-links-vertical">
+          <li><a href="javascript:void(0)" id="privacy-link">Privacy Policy</a></li>
+          <li><a href="javascript:void(0)" id="terms-link">Terms of Service</a></li>
+        </ul>
+      </div>
+
+    </div>
+
+    <div class="footer-bottom container">
+      <p class="footer-copy">© 2026 IntelliPath. This project is for educational purposes only.</p>
+    </div>
+  </footer>
+
+  <script src="../static/js/script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,99 @@
+.result-body {
+    background: var(--bg);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.result-main {
+    flex: 1;
+    padding: 6rem 0 4rem;
+    position: relative;
+    overflow-x: hidden;
+}
+
+.result-container {
+    max-width: 800px;
+}
+
+.result-card {
+    text-align: center;
+    padding: 3rem;
+    border-radius: 2rem;
+    margin-bottom: 3rem;
+    position: relative;
+    z-index: 10;
+}
+
+.result-header h1 {
+    font-size: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    color: var(--primary);
+    margin-bottom: 1rem;
+}
+
+.top-career-name {
+    font-size: clamp(2.5rem, 5vw, 4rem);
+    font-weight: 800;
+    margin-bottom: 1.5rem;
+    line-height: 1.1;
+}
+
+.result-desc {
+    color: var(--muted);
+    font-size: 1.125rem;
+    line-height: 1.6;
+    max-width: 600px;
+    margin: 0 auto 2.5rem;
+}
+
+/* --- Matches Grid --- */
+.matches-section h2 {
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.matches-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 3rem;
+}
+
+.match-card {
+    padding: 2rem;
+    border-radius: 1.25rem;
+    text-align: left;
+    transition: transform 0.3s ease;
+}
+
+.match-card:hover {
+    transform: translateY(-5px);
+}
+
+.match-card h3 {
+    font-size: 1.25rem;
+    margin-bottom: 0.75rem;
+}
+
+.match-card p {
+    color: var(--muted);
+    font-size: 0.9375rem;
+    margin-bottom: 1.5rem;
+}
+
+/* --- Action Buttons --- */
+.result-actions {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+}
+
+@media (max-width: 640px) {
+    .result-actions {
+        flex-direction: column;
+        align-items: stretch;
+    }
+}
